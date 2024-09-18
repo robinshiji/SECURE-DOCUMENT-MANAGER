@@ -1,0 +1,17 @@
+{% include 'home.html' %}
+
+
+<!DOCTYPE html>
+
+<head>
+    <title>LUMINA LOGIC</title>
+</head>
+<body>
+    <h2 style="color: rgb(26, 222, 0); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">PDF CONVERTER </h2><br></br>
+    <form method="post" enctype="multipart/form-data"><br></br>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Convert to PDF</button>
+    </form>
+</body>
+</html>

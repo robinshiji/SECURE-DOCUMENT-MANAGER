@@ -1,0 +1,131 @@
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #181a1f;
+      color: #fff;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      width: 250px;
+      background-color: #2d2f34;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding-top: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin: 0 0 20px 0;
+      font-size: 1.5em;
+    }
+
+    .sidebar h2:hover{
+
+      color: cyan;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      padding: 15px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #6bf07f;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #efefef;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar ul li a i {
+      margin-right: 10px;
+    }
+
+    /* Main content styling */
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #1f2125;
+    }
+
+    .main-content h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #e1e1e1;
+    }
+
+    .document-list {
+      background-color: #2d2f34;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .document-list h2 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .document-list table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .document-list th, .document-list td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #444;
+    }
+
+    .document-list th {
+      background-color: #3a3d42;
+    }
+
+    .document-list td a {
+      color: #4caf50;
+      text-decoration: none;
+    }
+
+    .document-list td a:hover {
+      text-decoration: underline;
+    }
+
+    /* Add Document Form */
+    .add-document-form {
+      margin-bottom: 20px;
+    }
+
+    .add-document-form input[type="file"], .add-document-form button {
+      padding: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .add-document-form button {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .add-document-form button:hover {
+      background-color: #45a049;
+    }
+     
+    

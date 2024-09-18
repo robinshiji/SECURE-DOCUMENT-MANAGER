@@ -1,0 +1,63 @@
+{%include 'home.html' %}
+
+<div class="main-content">
+  <h1>My Documents</h1>
+
+<div class="add-document-form">
+  <form action="{% url 'document' %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="file">
+      <button type="submit" onclick="demo()">Add Document</button>
+  </form>
+      <button><a href="{% url 'viewdoc' %}" style="text-decoration: none; color: white; ">view Documents</a></button>
+  
+
+
+
+<div class="main-content">
+  <h1>My Documents</h1>
+<div class="document-list">
+  <h2>Your Documents</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Document Name</th>
+        <th>Upload Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for document in documents %}
+      <tr>
+        <td>
+          <a href="{{ document.file.url }}" target="_blank">{{ document.file.name }}</a> 
+           
+      </td>
+        <td>{{ document.date }}</td>
+        <td>
+          <a href="{% url 'download' document.id %}">download</a>/<a href="{% url 'delete' document.id %}">delete</a>
+        </td>
+      </tr>
+      
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<script>
+  function demo(){
+    alert('document added sucessfully')
+  }
+  
+</script>
+
+
+
+
+
+

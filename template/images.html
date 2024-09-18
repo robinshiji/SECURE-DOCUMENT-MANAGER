@@ -1,0 +1,58 @@
+{% include 'home.html' %}
+
+<div class="main-content">
+  <h1>My images</h1>
+
+  <!-- Add Document Form -->
+  <div class="add-document-form">
+    <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="image"> <!-- Added the 'name' attribute -->
+      <button type="submit" onclick="demo()">Add Images</button>
+    </form>
+    <button>
+      <a href="{% url 'viewimg' %}" style="text-decoration: none; color: white;">View Images</a>
+    </button>
+
+    <div class="main-content">
+      <h1>My Images</h1>
+    <div class="document-list">
+      <h2>Your Images</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Image Name</th>
+            <th>Upload Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for imgs in img %}
+          <tr>
+            <td>
+              <a href="{{ imgs.image.url }}" target="_blank">{{ imgs.image.name }}</a> 
+               
+          </td>
+            <td>{{ imgs.date }}</td>
+            <td><a href="{% url 'delete_image' imgs.id %}">delete</a></td>
+          </tr>
+          
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+  
+    
+    <script>
+      function demo(){
+        alert('image added sucessfully')
+      }
+    </script>
+    
+    
+    
+  

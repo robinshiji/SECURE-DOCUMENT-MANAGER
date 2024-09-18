@@ -1,0 +1,11 @@
+{%include 'home.html' %}
+
+<div class="main-content">
+  <h1>images</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Confirm Deletion</button>
+    <a href="{% url 'viewimg' %}">Cancel</a>
+</form>
+</div>
